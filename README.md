@@ -43,8 +43,11 @@ For example, add the following payload as a **tag value** within a Mist resource
   
 <img src="/assets/mist_xss_alert.png" width="700">
 
+## 🎬 Demonstration Video
 
-
+<a href="https://www.youtube.com/watch?v=HNcb-oYFdVg" target="_blank">
+  <img src="https://img.youtube.com/vi/HNcb-oYFdVg/maxresdefault.jpg" width="700" height="380"/>
+</a>
 
 ## 🧑‍💻 Discovery
 The **CVE-2025-XXXX** vulnerability was discovered by **Alex Perrakis (Stolichnayer)**.
