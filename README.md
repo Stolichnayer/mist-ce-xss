@@ -28,14 +28,23 @@ For example, add the following payload as a **tag value** within a Mist resource
 ```html
 <iframe src="javascript:alert('XSS')"></iframe>
 ```
+<img src="/assets/mist_adding_xss.png" width="700">
 
-### 2️⃣ Trigger the Exploit
+### 2️⃣ Save Tag
+- Click the **Save** button to store the tag.
+- The malicious payload is now stored within the Mist resource.
+
+<img src="/assets/mist_tag_1.png">
+
+### 3️⃣ Trigger the Exploit
 - Navigate to the **resource listing page** where the tag is displayed.
 - The payload executes automatically, triggering the JavaScript.
-
-### 3️⃣ Impact Demonstration
-- A more advanced payload could exfiltrate session cookies or perform additional malicious actions.
 - This vulnerability can be combined with **CSRF attacks** for further exploitation.
+  
+<img src="/assets/mist_xss_alert.png" width="700">
+
+
+
 
 ## 🧑‍💻 Discovery
 The **CVE-2025-XXXX** vulnerability was discovered by **Alex Perrakis (Stolichnayer)**.
