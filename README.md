@@ -1,14 +1,14 @@
 # CVE-2025-MIST-XSS  
 ## Stored Cross-Site Scripting (XSS) in Tag Field
 
-### 📜 Description
+## 📜 Description
 Mist CE v4.7.1 contains a **Stored Cross-Site Scripting (XSS)** vulnerability within its tag functionality. Mist resources, including **Machines, Volumes, Zones, Images, Keys, and Scripts**, support user-defined tags in key-value format. The vulnerability resides in the **value field** of these tags, where malicious JavaScript code can be injected and persistently stored. When a user views the resource listing page, the injected script is executed due to the application’s failure to properly sanitize user input.
 
-### 📌 Affected Version
+## 📌 Affected Version
 - **Mist CE v4.7.1** (latest release)
 - Other versions may also be affected but have not been tested.
 
-### ⚠️ Disclaimer
+## ⚠️ Disclaimer
 This project is intended for **educational and ethical research purposes only**.
 Unauthorized testing on systems without explicit permission is illegal.
 Use responsibly and only on systems you own or have permission to test.
@@ -26,7 +26,7 @@ The injected script remains stored within the Mist interface and is triggered wh
 ### 1️⃣ Insert Malicious Payload into a Tag
 For example, add the following payload as a **tag value** within a Mist resource:
 ```html
-<iframe src="javascript:alert('XSS')"></iframe>
+<iframe src="javascript:alert('Clouds')"></iframe>
 ```
 <img src="/assets/mist_adding_xss.png" width="700">
 
