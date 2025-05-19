@@ -1,12 +1,42 @@
-# CVE-2025-MIST-XSS  
-## Stored Cross-Site Scripting (XSS) in Tag Field
+# Stored Cross-Site Scripting (XSS) in Tag Field
+
+<table>
+  <tr>
+    <td width="150" rowspan="2">
+      <a href="https://github.com/mistio/mist-ce" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/1569127?s=200&v=4" alt="Summer Pearl Logo" width="120"/>
+      </a>
+    </td>
+    <td>
+      <h1>Mist Community Edition</h1>
+      <h3> An Open-Source Multicloud Management Platform</h3>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table>
+        <tr>
+          <td>
+            🔗 <a href="https://github.com/mistio/mist-ce" target="_blank">Mist Github Repository</span></a>
+          </td>
+          <td style="padding-left: 15px;">
+            🚀 <a href="https://github.com/mistio/mist-ce/releases/tag/v4.7.2" target="_blank"> Patched Version (v4.7.2) </span></a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
 
 ## 📜 Description
-**Mist Community Edition (CE) v4.7.1** contains a **Stored Cross-Site Scripting (XSS)** vulnerability within its tag functionality. Mist resources, including **Machines, Volumes, Zones, Images, Keys, and Scripts**, support user-defined tags in key-value format. The vulnerability resides in the **value field** of these tags, where malicious JavaScript code can be injected and persistently stored. When a user views the resource listing page, the injected script is executed due to the application’s failure to properly sanitize user input.
+Mist Community Edition (CE) versions prior to 4.7.2 fail to sanitize user-controlled input in tag value fields across multiple resource types, including Machines, Volumes, Zones, Images, Keys, and Scripts. Authenticated attackers can inject persistent JavaScript payloads via crafted tags, which execute automatically when victims view affected resources in the web interface.
 
-## 📌 Affected Version
-- Mist Community Edition (CE) v4.7.1
-- Other versions prior to v4.7.1 may also be affected
+## 🔍 Affected Versions
+
+| Status       | Version         |
+|--------------|-----------------|
+| 🔴 Vulnerable |  ≤ `4.7.1`      |
+| 🟢  Fixed     |  &nbsp;&nbsp;`4.7.2`      |   
 
 ## ⚠️ Disclaimer
 This project is intended for **educational and ethical research purposes only**. Unauthorized testing on systems without explicit permission is illegal. Use responsibly and only on systems you own or have permission to test.
@@ -48,8 +78,11 @@ For example, add the following payload as a **tag value** within a Mist resource
 </a>
 
 ## 🧑‍💻 Discovery
-The **CVE-2025-XXXX** vulnerability was discovered by **Alex Perrakis (Stolichnayer)**.
 
-## 🔗 **References:**
+This vulnerability was discovered by **Alex Perrakis** (Stolichnayer).
+
+## 🔗 References:
 - [Mist CE Github Repository](https://github.com/mistio/mist-ce)
+- [Patched Version (v4.7.2)](https://github.com/mistio/mist-ce/releases/tag/v4.7.2)
+- [Fix Commit](https://github.com/mistio/mist.api/commit/db10ecb62ac832c1ed4924556d167efb9bc07fad)
 
